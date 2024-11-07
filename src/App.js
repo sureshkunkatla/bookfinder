@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+import Loader from "./components/Loader";
+import { useLoader } from "./context/LoaderContext";
+import Home from "./pages/Home";
+import store from "./store/store";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BookDetails from "./pages/BookDetails";
+import NoPageFound from "./pages/NoPageFound";
+
 
 function App() {
+  const { loading } = useLoader();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Provider store={store}>
+      <Router>
+    <div className="relative">
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/book-details/:bookId' element={<BookDetails/>}/>
+        <Route path='*' element={<NoPageFound/>}/>
+      </Routes>
+      {loading && (
+        <div className="h-[100vh] w-[100vw] absolute z-50 inset-0 bg-[#000000aa] flex flex-row justify-center items-center">
+          <Loader />
+        </div>
+      )}
     </div>
+    </Router>
+    </Provider>
   );
 }
 

@@ -1,0 +1,17 @@
+export const subjects = [
+    { name: "Art", endpoint: "subjects/art.json?" },
+    { name: "Science", endpoint: "subjects/science.json?" },
+    { name: "Literature", endpoint: "subjects/literature.json?" },
+    { name: "History", endpoint: "subjects/history.json?" },
+    { name: "Music", endpoint: "subjects/music.json?" },
+    { name: "Biography", endpoint: "subjects/biography.json?" },
+    { name: "Philosophy", endpoint: "subjects/philosophy.json?" },
+    { name: "Children's Literature", endpoint: "subjects/children.json?" },
+    { name: "Education", endpoint: "subjects/education.json?" },
+    { name: "Fantasy", endpoint: "subjects/fantasy.json?" },
+    { name: "Mystery", endpoint: "subjects/mystery.json?" },
+    { name: "Horror", endpoint: "subjects/horror.json?" },
+    { name: "Romance", endpoint: "subjects/romance.json?" },
+    { name: "Sports", endpoint: "subjects/sports.json?" },
+    { name: "Travel", endpoint: "subjects/travel.json?" },
+  ];
