@@ -25,7 +25,7 @@ const BookDetails = () => {
     };
 
     fetchBookDetails();
-  }, []);
+  }, [bookId]);
 
 
 
