@@ -46,6 +46,7 @@ const BookDetails = () => {
         </div>
         <div className="overflow-y-scroll no-scrollbar">
           <img
+            alt={selectedBook.cover_i || selectedBook.cover_id}
             className="w-[200px] ml-auto mr-auto mt-3"
             src={`https://covers.openlibrary.org/b/id/${
               selectedBook.cover_i || selectedBook.cover_id
